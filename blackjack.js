@@ -99,9 +99,9 @@ async function blackjackSpiel() {
         }
         anzeigenHand([spielerHand.join(", ") + ` (Gesamtwert: ${spielerWert})`, dealerHand.join(", ") + ` (Gesamtwert: ${dealerWert})`]);
  
-        if (spielerWert === 21 && spielerHand.length === 2 && dealerWert !== 21) {
+        if (spielerWert === 21 && spielerHand.length === 2) {
             console.log(`\n${spielerName.name} hat Blackjack!`);
-        } else if (dealerWert === 21 && dealerHand.length === 2 && spielerWert !== 21) {
+        } else if (dealerWert === 21 && dealerHand.length === 2) {
 			console.log(`\nDealer hat Blackjack!`);
 		} else {
             if (spielerWert > 21 && dealerWert <= 21) {
