@@ -101,8 +101,9 @@ async function blackjackSpiel() {
  
         if (spielerWert === 21 && spielerHand.length === 2 && dealerWert !== 21) {
             console.log(`\n${spielerName.name} hat Blackjack!`);
-        } else {
-        
+        } else if (dealerWert === 21 && dealerHand.length === 2 && spielerWert !== 21) {
+			console.log(`\nDealer hat Blackjack!`);
+		} else {
             if (spielerWert > 21 && dealerWert <= 21) {
                 console.log(`\n${spielerName.name} bust! Dealer gewinnt.`);
             } else if (dealerWert > 21 && spielerWert <= 21) {
